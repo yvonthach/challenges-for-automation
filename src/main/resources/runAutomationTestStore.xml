@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Automation Test Store">
+	<parameter name="url" value="https://automationteststore.com/"/>
+	<test name="Run on chrome">
+		<parameter name="browser" value="chrome"/>
+		<classes>
+			<class name="automationStore.AutomationTestStore"/>
+		</classes>
+	</test>
+	<test name="Run on firefox">
+		<parameter name="browser" value="firefox"/>
+		<classes>
+			<class name="automationStore.AutomationTestStore"/>
+		</classes>
+	</test>
+</suite>
