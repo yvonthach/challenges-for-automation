@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Automation Test Store">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+	</listeners>
 	<parameter name="url" value="https://automationteststore.com/"/>
 	<test name="Run on chrome">
 		<parameter name="browser" value="chrome"/>

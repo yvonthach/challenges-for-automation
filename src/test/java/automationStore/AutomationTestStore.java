@@ -63,9 +63,9 @@ public class AutomationTestStore extends BaseTest {
     @Test
     public void TestCase03_Verify_Add_To_Cart() {
 	
-	log.info("Step 6: Click to add to Card an Item on T-shirts");
+	log.info("TestCase03 - Step 6: Click to add to Card an Item on T-shirts");
 	productDetail = productCategory.clickToAddToCartOnItem("Casual 3/4 Sleeve Baseball T-Shirt");
-	log.info("Step 6-1: Verify the item detailed  information");
+	log.info("TestCase03 - Step 6-1: Verify the item detailed  information");
 	Assert.assertTrue(productDetail.isItemDetailDisplayed("Casual 3/4 Sleeve Baseball T-Shirt"));
 
     }
