@@ -160,7 +160,7 @@
 				<configuration>
 					<!-- Run TestNG xml file -->
 					<suiteXmlFiles>
-						<suiteXmlFile>src/main/resources/runAutomationTestStore.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/runAutomationTestStore.xml</suiteXmlFile>
 					</suiteXmlFiles>
 
 				</configuration>
