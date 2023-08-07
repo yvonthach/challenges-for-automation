@@ -38,9 +38,7 @@ public class ProductCategoryPageObject extends BasePage {
 
 	// get text of above element and add those text into an array
 	for (WebElement productPrice : productPriceText) {
-	    String priceText = productPrice.getText();
-	    priceText.replace("$", "");
-	    Float priceTextFloat = Float.parseFloat(priceText);    
+	    Float priceTextFloat = Float.parseFloat(productPrice.getText().replace("$", ""));    
 	    productUIList.add(priceTextFloat);
 	    System.out.println("Product price: " + productPrice.getText());
 	}
