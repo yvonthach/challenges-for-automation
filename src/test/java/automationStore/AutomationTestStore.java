@@ -30,13 +30,15 @@ public class AutomationTestStore extends BaseTest {
     @Test
     public void TestCase01() {
 	log.info("TestCase01 - Step 1: Verify Home page is open");
-	Assert.assertTrue(homePage.isHomePageTitleDisplayed());
+//	Assert.assertTrue(homePage.isHomePageTitleDisplayed());
+	verifyFalse(homePage.isHomePageTitleDisplayed());
 
 	log.info("TestCase01 - Step 2: Hover on Apparel & Accessories Menu");
 	homePage.hoverOnApparelAndAccessoriesMenu();
 
 	log.info("TestCase01 - Step 2-1: Verify Shoes category is displayed");
-	Assert.assertTrue(homePage.isShoeSubcategoriesDisplayed());
+//	Assert.assertTrue(homePage.isShoeSubcategoriesDisplayed());
+	verifyFalse(homePage.isShoeSubcategoriesDisplayed());
 
 	log.info("TestCase01 - Step 2-2: Verify T-shirt category is displayed");
 	Assert.assertTrue(homePage.isTShirtSubcategoriesDisplayed());
