@@ -12,4 +12,11 @@
 			<class name="automationStore.AutomationTestStore"/>
 		</classes>
 	</test>
+	
+	<test name="Run on Firefox">
+		<parameter name="browser" value="firefox"/>
+		<classes>
+			<class name="automationStore.AutomationTestStore"/>
+		</classes>
+	</test>
 </suite>

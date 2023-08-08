@@ -1,7 +1,6 @@
 package automationStore;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -30,24 +29,22 @@ public class AutomationTestStore extends BaseTest {
     @Test
     public void TestCase01() {
 	log.info("TestCase01 - Step 1: Verify Home page is open");
-//	Assert.assertTrue(homePage.isHomePageTitleDisplayed());
-	verifyFalse(homePage.isHomePageTitleDisplayed());
+	verifyTrue(homePage.isHomePageTitleDisplayed());
 
 	log.info("TestCase01 - Step 2: Hover on Apparel & Accessories Menu");
 	homePage.hoverOnApparelAndAccessoriesMenu();
 
 	log.info("TestCase01 - Step 2-1: Verify Shoes category is displayed");
-//	Assert.assertTrue(homePage.isShoeSubcategoriesDisplayed());
-	verifyFalse(homePage.isShoeSubcategoriesDisplayed());
+	verifyTrue(homePage.isShoeSubcategoriesDisplayed());
 
 	log.info("TestCase01 - Step 2-2: Verify T-shirt category is displayed");
-	Assert.assertTrue(homePage.isTShirtSubcategoriesDisplayed());
+	verifyTrue(homePage.isTShirtSubcategoriesDisplayed());
 
 	log.info("TestCase01 - Step 2-2: Click on T-Shirts categories");
 	productCategory = homePage.clickToTShirtsCategories();
 
 	log.info("TestCase01 - Step 3: Verify T-Shirts page is displayed");
-	Assert.assertTrue(productCategory.isTShirtsPageDisplayed());
+	verifyTrue(productCategory.isTShirtsPageDisplayed());
 
     }
 
@@ -59,7 +56,7 @@ public class AutomationTestStore extends BaseTest {
 	productCategory.sleep(3);
 
 	log.info("TestCase02 - Step 5: Verify that all items  were sorted by Price Low > High ");
-	Assert.assertTrue(productCategory.isProductPriceSortByAscendingPrice());
+	verifyTrue(productCategory.isProductPriceSortByAscendingPrice());
 	productCategory.sleep(5);}
     
     @Test
@@ -68,7 +65,7 @@ public class AutomationTestStore extends BaseTest {
 	log.info("TestCase03 - Step 6: Click to add to Card an Item on T-shirts");
 	productDetail = productCategory.clickToAddToCartOnItem("Casual 3/4 Sleeve Baseball T-Shirt");
 	log.info("TestCase03 - Step 6-1: Verify the item detailed  information");
-	Assert.assertTrue(productDetail.isItemDetailDisplayed("Casual 3/4 Sleeve Baseball T-Shirt"));
+	verifyTrue(productDetail.isItemDetailDisplayed("Casual 3/4 Sleeve Baseball T-Shirt"));
 
     }
 
